@@ -143,3 +143,23 @@ footer .logo img{width:132px;height:auto}
 .footer-contacts a b{color:#ddd4ee;font-weight:400;overflow-wrap:anywhere}
 .footer-contacts a:hover b{color:#fff}
 .footer-contacts a:focus-visible{outline:2px solid #b9a1ff;outline-offset:5px;border-radius:3px}
+
+/* About: direct contact channels with the shared graphite and glass finish. */
+main:has(>.page-title)>.section.about-contact{background:radial-gradient(ellipse at 85% 80%,#65508724,transparent 62%),#111217;border-top:1px solid #ffffff0b}
+.contact-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:36px}
+.contact-heading h2{margin:0;line-height:1.25}
+.contact-heading .eyebrow{margin:0 0 16px}
+.contact-heading>p{max-width:350px;margin:0;font-size:15px;line-height:1.8}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.contact-card{display:flex;flex-direction:column;min-width:0;padding:34px;border:1px solid #ffffff1c;border-radius:24px;background:linear-gradient(125deg,#ffffff09,#b798eb05);box-shadow:inset 0 1px #ffffff0c;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#f0ebf8;transition:border-color .25s,background .25s,transform .25s}
+.contact-card:hover{border-color:#bfa5f163;background:linear-gradient(125deg,#b698e41a,#ffffff07);transform:translateY(-3px)}
+.contact-card:focus-visible{outline:2px solid #c4b1f2;outline-offset:5px}
+.contact-icon{display:grid;place-items:center;width:48px;height:48px;border:1px solid #c9b3f12b;border-radius:15px;background:linear-gradient(135deg,#baa2e923,#ffffff05);color:#cbb7ed;box-shadow:inset 0 1px #ffffff0c;margin-bottom:26px}
+.contact-icon svg{width:24px;height:24px}
+.contact-card h3{margin:0 0 12px;font-size:24px;line-height:1.4;font-weight:500}
+.contact-card p{margin:0 0 30px;font-size:14px;line-height:1.8}
+.contact-email{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:auto;padding-top:24px;border-top:1px solid #ffffff16;font-size:clamp(18px,1.8vw,24px);font-weight:500;line-height:1.4;letter-spacing:-.3px}
+.contact-email>span{min-width:0;overflow-wrap:anywhere}
+.contact-email>svg{width:22px;height:22px;flex-shrink:0;color:#c9b8e9}
+@media(max-width:800px){.contact-heading{display:block}.contact-heading>p{margin-top:20px;max-width:100%}.contact-grid{grid-template-columns:1fr;gap:16px}.contact-card{padding:26px 22px}.contact-card h3{font-size:22px}.contact-email{font-size:18px;gap:12px}.contact-email>svg{width:20px;height:20px}}
+@media(prefers-reduced-motion:reduce){.contact-card{transition:none}.contact-card:hover{transform:none}}
