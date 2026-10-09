@@ -390,3 +390,4 @@ Object.assign(en,{
 });
 
 Object.assign(en,{'合规咨询':'Compliance enquiries','客户支持':'Customer support','联系客服':'Contact support','咨询转账问题':'Transfer support','个人账户、交易或产品使用问题，请联系客户支持：':'For personal account, transaction or product questions, contact customer support:'});
+Object.assign(en,{'联系我们':'Contact us','产品支持与合规咨询，欢迎联系我们':'Contact us for product support or compliance enquiries.','账户、转账、兑换及卡片使用问题':'Questions about your account, transfers, exchanges or card','合规事项、监管咨询及相关资料沟通':'Compliance matters, regulatory enquiries and related documentation'});

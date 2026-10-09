@@ -1,6 +1,6 @@
-import {transferVisual} from '../components/transfer.js?v=56';
-import {products} from '../data/products.js?v=56';
-import {link,visual,phone,card,headline} from '../components/ui.js?v=56';
+import {transferVisual} from '../components/transfer.js?v=57';
+import {products} from '../data/products.js?v=57';
+import {link,visual,phone,card,headline} from '../components/ui.js?v=57';
 const tiles=(items)=>`<div class="grid three">${items.map(([t,d],i)=>`<article class="info-card"><span class="eyebrow">0${i+1}</span><h3>${t}</h3><p>${d}</p></article>`).join('')}</div>`;
 export function overview(){return `<section class="page-title"><p class="eyebrow">THE BG Exchange ECOSYSTEM</p><h1>一个钱包连接更多可能</h1><p>Digital finance meets everyday life.</p></section><section class="section product-grid">${products.map(p=>link(p.id,`<div class="product-card-art"><span>${p.icon}</span><div class="mini-ui"><small>BG Exchange</small><h3>${p.name}</h3><div class="skeleton-line"></div><div class="skeleton-line short"></div></div></div><div class="product-card-copy"><small>${p.group}</small><h3>${p.name}</h3><p>${p.desc}</p><b>Explore <span>→</span></b></div>`,'product-card')).join('')}</section>`}
 export function productPage(id){const p=products.find(p=>p.id===id);let content='';
