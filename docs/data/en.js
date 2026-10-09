@@ -388,3 +388,5 @@ Object.assign(en,{
   "在 BG Exchange App 中查看卡片的适用地区、申请条件与消费场景。": "Check supported regions, eligibility and spending options in the BG Exchange app.",
   "按 BG Exchange App 内的指引完成身份验证。": "Follow the instructions in the BG Exchange app to verify your identity."
 });
+
+Object.assign(en,{'合规咨询':'Compliance enquiries','客户支持':'Customer support','联系客服':'Contact support','咨询转账问题':'Transfer support','个人账户、交易或产品使用问题，请联系客户支持：':'For personal account, transaction or product questions, contact customer support:'});

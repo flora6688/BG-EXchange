@@ -1,5 +1,5 @@
-import {link,button,visual,card,headline} from '../components/ui.js?v=55';
-import {security} from '../data/products.js?v=55';
+import {link,button,visual,card,headline} from '../components/ui.js?v=56';
+import {security} from '../data/products.js?v=56';
 export const homeTabs=[
 ['安全存放','清楚掌握每一笔资产','收到 USDT 等受支持的数字资产后，在 BG Exchange 集中查看余额与收款记录。了解账户安全设置，让每一次使用都有据可查。','wallet'],
 ['稳健增值','按计划安排资产增值','通过活期与定期理财，按资金使用计划选择产品，清楚查看持仓、收益与赎回规则。','grow'],

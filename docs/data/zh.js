@@ -425,7 +425,7 @@ Digital assets can change in value. Transfers may be irreversible, and selecting
 Product information and fees=>产品信息与费用
 Product examples, balances, networks and interface mockups in this demo are illustrative. Review confirmed service details and fees in the app.=>本演示中的产品示例、余额、网络和界面模型仅供示意。请在 App 内查看已确认的服务详情与费用。
 Contact and further terms=>联系信息与其他条款
-For compliance inquiries, contact compliance@bgdigital.global. Governing law, dispute resolution, liability provisions and other final legal terms require review and confirmation.=>合规咨询请联系 compliance@bgdigital.global。准据法、争议解决、责任条款及其他最终法律条款须经过审核确认。
+For compliance inquiries, contact compliance@bgx.global. Governing law, dispute resolution, liability provisions and other final legal terms require review and confirmation.=>合规咨询请联系 compliance@bgx.global。准据法、争议解决、责任条款及其他最终法律条款须经过审核确认。
 About this policy=>关于本政策
 This page outlines the proposed privacy information structure for BG Exchange. It is a draft for review, not a finalized privacy policy.=>本页面展示 BG Exchange 隐私信息的拟定结构，属于待审核草案，并非最终隐私政策。
 Information and purposes=>信息类型与使用目的

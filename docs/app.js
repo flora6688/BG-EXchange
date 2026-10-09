@@ -1,27 +1,25 @@
-import {applyLanguage,toggleLanguage} from './data/language.js?v=55';
-import {lawEnforcementPage} from './pages/law-enforcement.js?v=55';
-import {localize,translateText} from './data/zh.js?v=55';
-import {products} from './data/products.js?v=55';
-import {articles} from './data/help.js?v=55';
-import {header,footer} from './components/layout.js?v=55';
-import {link} from './components/ui.js?v=55';
-import {home,homePanel,heroSlide,heroSlides} from './pages/home.js?v=55';
-import {overview,productPage,scene} from './pages/products.js?v=55';
-import {securityPage,compliancePage,aboutPage,helpPage,helpResults,feesPage,assetsPage,assets,legalPage} from './pages/information.js?v=55';
+import {applyLanguage,toggleLanguage} from './data/language.js?v=56';
+import {lawEnforcementPage} from './pages/law-enforcement.js?v=56';
+import {localize,translateText} from './data/zh.js?v=56';
+import {products} from './data/products.js?v=56';
+import {header,footer} from './components/layout.js?v=56';
+import {link} from './components/ui.js?v=56';
+import {home,homePanel,heroSlide,heroSlides} from './pages/home.js?v=56';
+import {overview,productPage,scene} from './pages/products.js?v=56';
+import {securityPage,compliancePage,aboutPage,feesPage,assetsPage,assets,legalPage} from './pages/information.js?v=56';
 const root=document.querySelector('#app');
 root.innerHTML=header()+'<main id="main" tabindex="-1"></main>'+footer()+'<dialog id="dialog"><button class="dialog-close" aria-label="Close dialog">×</button><div id="dialog-content"></div></dialog>';
 const main=document.querySelector('main'), dialog=document.querySelector('dialog');
-const routes={'/law-enforcement':lawEnforcementPage,'/':home,'/products':overview,'/security':securityPage,'/compliance':compliancePage,'/about':aboutPage,'/help':helpPage,'/fees':feesPage,'/assets':assetsPage,'/legal':()=>legalPage(),'/privacy':()=>legalPage(true)};
+const routes={'/law-enforcement':lawEnforcementPage,'/':home,'/products':overview,'/security':securityPage,'/compliance':compliancePage,'/about':aboutPage,'/fees':feesPage,'/assets':assetsPage,'/legal':()=>legalPage(),'/privacy':()=>legalPage(true)};
 products.forEach(p=>routes['/'+p.id]=()=>productPage(p.id));
-let timer,transition=0,helpCategory='All';
+let timer,transition=0;
 const closeMenus=()=>{document.querySelector('#mega').hidden=true;document.querySelector('#products-toggle').setAttribute('aria-expanded','false');document.querySelectorAll('.small-menu').forEach(m=>m.hidden=true);document.querySelectorAll('[data-menu]').forEach(b=>b.setAttribute('aria-expanded','false'));};
 const closeMobile=()=>{document.querySelector('#mobile-nav').hidden=true;document.querySelector('#mobile-toggle').setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');};
-function refreshHelp(){const q=document.querySelector('#help-search')?.value??'';let r=helpResults(q,helpCategory);document.querySelector('#help-results').innerHTML=r.html;document.querySelector('#help-count').textContent=`${r.count} articles`;}
 function refreshAssets(){const q=document.querySelector('#asset-search').value.toLowerCase(),n=document.querySelector('#network-filter').value;const found=assets.filter(a=>(a.slice(0,2).join(' ')+' '+a.slice(0,2).map(translateText).join(' ')).toLowerCase().includes(q)&&(!n||n===a[2]));document.querySelector('#asset-results').innerHTML=found.length?found.map(a=>`<tr><td><b>${a[0]}</b><small>${a[1]}</small></td><td>${a[2]}</td><td>Confirm in app</td><td>Confirm in app</td></tr>`).join(''):'<tr><td colspan="4">No matching example assets. Try another search or network.</td></tr>';document.querySelector('#asset-count').textContent=`${found.length} example assets`}
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});
 const transferObserver=new IntersectionObserver(entries=>entries.forEach(({target,isIntersecting})=>target.classList.toggle('is-visible',isIntersecting)),{threshold:.15});
 document.addEventListener('click',e=>{const control=e.target.closest('[data-transfer-pause]');if(!control)return;const paused=control.closest('[data-transfer-visual]').classList.toggle('is-paused');control.setAttribute('aria-pressed',String(paused));});
-function render(){transferObserver.disconnect();const path=location.pathname.replace(/^\/BG\-EXchange(?=\/|$)/,'').replace(/\/$/,'')||'/';const fn=routes[path];main.innerHTML=fn?fn():`<section class="page-title"><p class="eyebrow">404</p><h1>暂未找到这个页面</h1>${link('','Return home →','button')}</section>`;document.title=`${path==='/'?'Your digital assets, built for real life':products.find(p=>'/'+p.id===path)?.name??({'/law-enforcement':'执法协助','/products':'Products','/security':'Security','/compliance':'Compliance','/about':'About','/help':'Help Center','/fees':'Fees','/assets':'Supported Assets','/legal':'Terms of Use','/privacy':'Privacy Policy'}[path]??'BG Exchange')} | BG Exchange`;document.querySelectorAll('[data-transfer-visual]').forEach(el=>transferObserver.observe(el));document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));if(path==='/help'){helpCategory='All';refreshHelp();}if(path==='/assets'&&document.querySelector('#asset-results'))refreshAssets();document.querySelectorAll('header a,footer a').forEach(a=>{if(a.getAttribute('href')==='/BG-EXchange'+(path==='/'?'/':path))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});}
+function render(){transferObserver.disconnect();const path=location.pathname.replace(/^\/BG\-EXchange(?=\/|$)/,'').replace(/\/$/,'')||'/';if(path==='/help'){location.replace(document.querySelector('header .logo').getAttribute('href'));return;}const fn=routes[path];main.innerHTML=fn?fn():`<section class="page-title"><p class="eyebrow">404</p><h1>暂未找到这个页面</h1>${link('','Return home →','button')}</section>`;document.title=`${path==='/'?'Your digital assets, built for real life':products.find(p=>'/'+p.id===path)?.name??({'/law-enforcement':'执法协助','/products':'Products','/security':'Security','/compliance':'Compliance','/about':'About','/fees':'Fees','/assets':'Supported Assets','/legal':'Terms of Use','/privacy':'Privacy Policy'}[path]??'BG Exchange')} | BG Exchange`;document.querySelectorAll('[data-transfer-visual]').forEach(el=>transferObserver.observe(el));document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));if(path==='/assets'&&document.querySelector('#asset-results'))refreshAssets();document.querySelectorAll('header a,footer a').forEach(a=>{if(a.getAttribute('href')==='/BG-EXchange'+(path==='/'?'/':path))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});}
 async function navigate(url,push=true){let current=++transition;closeMenus();closeMobile();main.classList.add('leaving');await new Promise(r=>setTimeout(r,150));if(current!==transition)return;if(push)history.pushState({},'',url);render();window.scrollTo({top:0,behavior:'instant'});main.classList.remove('leaving');main.classList.add('arriving');main.focus({preventScroll:true});setTimeout(()=>main.classList.remove('arriving'),250);}
 function showDialog(content){document.querySelector('#dialog-content').innerHTML=content;dialog.showModal();}
 document.addEventListener('click',e=>{const a=e.target.closest('a');if(a&&a.origin===location.origin&&!e.ctrlKey&&!e.metaKey&&!e.shiftKey&&!e.altKey&&e.button===0){if(a.hash&&a.pathname===location.pathname)return;e.preventDefault();navigate(a.pathname+a.search+a.hash);return;}const b=e.target.closest('button');if(!b)return;
@@ -30,11 +28,8 @@ if(b.dataset.menu){const m=document.getElementById(b.dataset.menu),open=m.hidden
 if(b.id==='mobile-toggle'){let open=document.querySelector('#mobile-nav').hidden;document.querySelector('#mobile-nav').hidden=!open;b.setAttribute('aria-expanded',String(open));document.body.classList.toggle('nav-open',open);}
 if(b.dataset.homeTab!==undefined){document.querySelectorAll('[data-home-tab]').forEach(t=>t.setAttribute('aria-selected',String(t===b)));document.querySelector('#home-panel').innerHTML=homePanel(+b.dataset.homeTab);document.querySelector('#home-panel').setAttribute('aria-labelledby',b.id);}
 if(b.dataset.scene!==undefined){document.querySelectorAll('[data-scene]').forEach(t=>t.setAttribute('aria-selected',String(t===b)));document.querySelector('#scene-panel').innerHTML=scene(+b.dataset.scene);}
-if(b.dataset.category){helpCategory=b.dataset.category;document.querySelectorAll('[data-category]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));refreshHelp();}
-if(b.id==='clear-help'){document.querySelector('#help-search').value='';helpCategory='All';document.querySelectorAll('[data-category]').forEach(t=>t.setAttribute('aria-pressed',String(t.dataset.category==='All')));refreshHelp();}
-if(b.dataset.article!==undefined){let a=articles[+b.dataset.article];showDialog(`<p class="eyebrow">HELP CENTER / ${a[0]}</p><h2>${a[1]}</h2><p>${a[2]}</p>`);}
 if(b.classList.contains('dialog-close'))dialog.close();});
-document.addEventListener('input',e=>{if(e.target.id==='help-search')refreshHelp();if(e.target.id==='asset-search')refreshAssets()});
+document.addEventListener('input',e=>{if(e.target.id==='asset-search')refreshAssets()});
 document.addEventListener('change',e=>{if(e.target.id==='network-filter')refreshAssets()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenus();closeMobile();}const tab=e.target.closest('[role="tab"]');if(tab&&['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const tabs=[...tab.parentElement.querySelectorAll('[role="tab"]')];let i=tabs.indexOf(tab);i=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[i].click();tabs[i].focus();}});
 document.addEventListener('click',e=>{if(!e.target.closest('header'))closeMenus();});
