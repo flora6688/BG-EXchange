@@ -129,13 +129,11 @@ Stay informed about account events and transaction status.=>及时了解账户�
 A FOUNDATION OF TRUST=>值得信任的基础
 Built with=>以合规为基础，
 compliance in mind.=>稳步构建服务。
-BG Digital Technology Ltd maintains regulatory registrations and compliance controls applicable to its services.=>BG Digital Technology Ltd 维护适用于其服务的监管注册与合规控制措施。
 View Compliance →=>查看合规信息 →
 COMPANY=>公司主体
 JURISDICTION=>注册地区
 UNITED STATES=>美国
 British Virgin Islands=>英属维尔京群岛
-Money Services Business registration=>货币服务业务（MSB）注册
 YOUR NEXT CHAPTER=>开启你的下一程
 Take BG Exchange=>带上 BG Exchange，
 with you.=>随时出发。
@@ -319,8 +317,6 @@ Protect your devices, review your activity and keep verification codes private.=
 Visit the Help Center →=>前往帮助中心 →
 TRUST & TRANSPARENCY=>信任与透明
 Compliance &=>合规与
-Regulatory Information=>监管信息
-Regulatory information=>监管信息
 AML & KYC=>反洗钱与身份验证
 Regional availability=>地区可用性
 Regional Availability=>地区可用性
@@ -328,14 +324,8 @@ Legal entity=>法律主体
 Jurisdiction=>注册地区
 Contact=>联系我们
 United States=>美国
-Registered as a Money Services Business with the Financial Crimes Enforcement Network where applicable.=>在适用情况下，已向美国金融犯罪执法网络（FinCEN）注册为货币服务业务（MSB）。
-MSB REGISTRATION NUMBER=>MSB 注册编号
-[Registration Number]=>[注册编号待补充]
-Registration does not constitute government approval or an endorsement of any product or service.=>注册不代表政府批准，也不构成对任何产品或服务的背书。
 Internal demo status=>内部演示状态
 Canada=>加拿大
-Regulatory registration in progress.=>监管注册正在推进中。
-Not a completed registration. Omit this status from external production marketing until confirmed.=>尚未完成注册。正式确认前，不应将此状态用于对外营销。
 BG Exchange applies identity verification, transaction monitoring and other compliance controls where required.=>BG Exchange 在必要时采用身份验证、交易监测及其他合规控制措施。
 Products and services may not be available in all jurisdictions. Eligibility requirements and applicable terms depend on the specific service.=>产品和服务可能不在所有司法辖区提供。用户资格与适用条款取决于具体服务。
 Read compliance FAQs →=>查看合规常见问题 →
@@ -598,11 +588,6 @@ Object.assign(zh,{
 'Take spending and connectivity with you.':'了解BG Card 跨境消费场景，确认目的地和适用条件。',
 'Digital asset users':'灵活兑换',
 'Manage supported assets in one place.':'用法币买入加密货币，或将加密货币兑换为法币。',
-'BG Digital Technology Ltd maintains regulatory registrations and compliance controls applicable to its services.':'BG Digital Technology Ltd 注册于英属维尔京群岛。根据公司提供的资料，目前持有美国 MSB 注册，加拿大 MSB 注册正在推进；具体记录与服务范围须分别核实。',
-'Registered as a Money Services Business with the Financial Crimes Enforcement Network where applicable.':'据公司提供资料，BG Digital Technology Ltd 已进行美国 MSB 注册。当前尚未提供注册编号，注册记录、有效状态与登记业务范围待核验。',
-'Registration does not constitute government approval or an endorsement of any product or service.':'FinCEN 的 MSB 注册不构成业务许可、合法性认证或政府背书，也不代表公司获准在所有地区提供所有服务。',
-'Regulatory registration in progress.':'据公司提供资料，加拿大 MSB 注册正在准备或申请中，尚未确认完成。',
-'Not a completed registration. Omit this status from external production marketing until confirmed.':'加拿大 FINTRAC 注册不等于业务许可或政府认可。取得注册后，仍须逐项评估兑换、卡片及资产管理等业务的适用要求，不代表这些业务自动获准开展。',
 'Put your assets to work.':'稳健增值，作为下一步规划。',
 'Grow is a product concept for future exploration. There is no investment, asset management or yield product available through this website.':'我们正在探索兼顾日常使用与长期安排的增值服务。相关服务尚未开放；“稳健增值”不代表保本、固定收益或无风险。具体产品须在规则、风险和适用要求明确后推出。',
 'Take BG Exchange':'你的加密资产，',

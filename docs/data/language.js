@@ -1,5 +1,5 @@
-import {zh,translateText} from './zh.js?v=57';
-import {en} from './en.js?v=57';
+import {zh,translateText} from './zh.js?v=58';
+import {en} from './en.js?v=58';
 const reverse=Object.fromEntries(Object.entries(zh).map(([a,b])=>[b,a]));
 let language='zh';try{language=localStorage.getItem('bg-language')==='en'?'en':'zh';}catch{}
 const originals=new WeakMap();

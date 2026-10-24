@@ -181,8 +181,6 @@ BG Exchange 由 BG Digital Technology Ltd 运营，主体注册于英属维尔�
 产品规则与申购、赎回条件=>Product, subscription and redemption terms
 借款期限、利息及其他适用费用=>Loan duration, interest and other applicable fees
 法律与合规=>Legal & compliance
-美国 MSB 注册=>US MSB registration
-据公司提供资料；注册编号与有效记录待核验。MSB 注册不代表政府背书或对所有业务的许可。=>Based on information supplied by the company. The registration number and current record remain to be verified. MSB registration is not government endorsement or authorization for every service.
 本网站所称“一站式资产管理”指账户内资产查看、存放、收付与使用，不表示已提供代客投资、投资建议或受托资产管理服务。理财与抵押借贷的具体服务主体、地区范围和适用要求，应以对应产品协议为准。=>On this website, all-in-one asset management refers to viewing, holding, sending, receiving and using assets within an account. It does not imply discretionary investment management, investment advice or fiduciary services. Providers, geographic scope and requirements for Earn and loans are set out in the relevant product agreements.
 旅行到了哪，=>Wherever you travel,
 生活就连接到哪。=>stay connected.
@@ -253,7 +251,7 @@ eSIM 将作为全球生活服务的一部分，与资产管理和消费体验相
 BG Exchange 不提供独立的跨境转账服务。钱包的发送与接收功能，请查看对应产品说明。=>BG Exchange does not offer a separate cross-border transfer service. See Send & Receive for wallet transfer features.
 `.trim().split('\n').map(line=>{const i=line.indexOf('=>');return [line.slice(0,i),line.slice(i+2)]}));
 Object.assign(en,{
-'了解 eSIM 二期规划':'Explore eSIM plans','了解服务规划':'Explore what is planned','了解钱包':'Explore the wallet','合规与监管信息':'Compliance & regulatory information','执法机构请求？查看执法协助指引':'For authorities: law enforcement guidance','有资金周转需求？了解加密货币抵押借贷':'Need liquidity? Explore crypto-backed loans','另有资金周转需求？了解加密货币抵押借贷':'Need liquidity? Explore crypto-backed loans','查看二期规划':'Explore Phase 2 plans','查看兑换费用说明':'View exchange fee information','查看全部产品':'Explore all products','了解 BG Card':'Explore BG Card','首页产品轮播':'Featured products','选择首页产品':'Choose a featured product','上一个产品':'Previous product','下一个产品':'Next product','兑换方向示意':'Exchange direction preview',
+'了解 eSIM 二期规划':'Explore eSIM plans','了解服务规划':'Explore what is planned','了解钱包':'Explore the wallet','合规信息':'Compliance information','执法机构请求？查看执法协助指引':'For authorities: law enforcement guidance','有资金周转需求？了解加密货币抵押借贷':'Need liquidity? Explore crypto-backed loans','另有资金周转需求？了解加密货币抵押借贷':'Need liquidity? Explore crypto-backed loans','查看二期规划':'Explore Phase 2 plans','查看兑换费用说明':'View exchange fee information','查看全部产品':'Explore all products','了解 BG Card':'Explore BG Card','首页产品轮播':'Featured products','选择首页产品':'Choose a featured product','上一个产品':'Previous product','下一个产品':'Next product','兑换方向示意':'Exchange direction preview',
 'BG Exchange 将资产存放、理财、抵押借贷、日常消费与法币兑换连接起来，让你在一个账户中管理资产的不同用途。eSIM 为二期服务，暂未上线。':'BG Exchange brings holding, earning, borrowing, spending and fiat exchange into one account. eSIM is planned for Phase 2 and is not yet available.',
 '让加密资产安全存放，稳健增值，自由消费。':'Hold securely. Grow thoughtfully. Spend freely.',
 '现在可以使用 eSIM 吗？':'Is eSIM available now?',
@@ -311,7 +309,7 @@ Object.assign(en, {
   "在钱包里查看网络与流量": "View coverage and data in your wallet",
   "守护账户与交易安全": "Protection for your account and transactions",
   "一起守护账户安全": "Keep your account secure together",
-  "合规与监管信息": "Compliance and regulatory information",
+  "合规信息": "Compliance information",
   "让数字资产融入真实生活": "Bring crypto into real life",
   "连接资产与生活": "Connect your assets to your life",
   "让数字资产易于管理便于使用": "Make crypto easier to manage and use",
